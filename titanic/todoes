@@ -1,0 +1,7 @@
+1. LabelEncoder
+2. Feature engineering pipeline
+    - implement some extra features from solutions
+    - freeze feature engineering
+3. Use several classifiers
+4. Use Grid Search for tree models params
+5. Assembly models
