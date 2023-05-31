@@ -1,4 +1,4 @@
-1. LabelEncoder
+1. LabelEncoder (done)
 2. Feature engineering pipeline
     - implement some extra features from solutions
     - freeze feature engineering
