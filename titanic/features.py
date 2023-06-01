@@ -1,9 +1,10 @@
+import numpy as np
 import pandas as pd
 from sklearn.compose import ColumnTransformer
 from sklearn.impute import SimpleImputer
 from sklearn.model_selection import train_test_split
 from sklearn.pipeline import Pipeline
-from sklearn.preprocessing import OneHotEncoder, LabelEncoder
+from sklearn.preprocessing import OneHotEncoder
 from sklearn.preprocessing import StandardScaler
 
 from titanic.data import SEED
@@ -102,5 +103,30 @@ def prepare_features_2(X: pd.DataFrame, feature_transformer: ColumnTransformer, 
     return X_train, X_test, y_train, y_test
 
 
-feature_transformer: ColumnTransformer = get_feature_transformer()
-feature_transformer.get_feature_names_out()
+def age_processing(train_df, test_df):
+    data = [train_df, test_df]
+
+    # todo: fill age base on other features (build a model for this?)
+    for dataset in data:
+        mean = train_df["Age"].mean()
+        std = test_df["Age"].std()
+        is_null = dataset["Age"].isnull().sum()
+        # compute random numbers between the mean, std and is_null
+        rand_age = np.random.randint(mean - std, mean + std, size=is_null)
+        # fill NaN values in Age column with random values generated
+        age_slice = dataset["Age"].copy()
+        age_slice[np.isnan(age_slice)] = rand_age
+        dataset["Age"] = age_slice
+        dataset["Age"] = train_df["Age"].astype(int)
+    print(train_df["Age"].isnull().sum())
+    print(test_df["Age"].isnull().sum())
+
+
+def embarked_processing(train_df):
+    common_value = 'S'
+    train_df["Embarked"] = train_df["Embarked"].fillna(common_value)
+
+
+def data_processing(train_df, test_df):
+    age_processing(train_df, test_df)
+    embarked_processing(train_df)
