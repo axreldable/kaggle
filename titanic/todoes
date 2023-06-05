@@ -1,7 +1,2 @@
-1. LabelEncoder (done)
-2. Feature engineering pipeline
-    - implement some extra features from solutions
-    - freeze feature engineering
-3. Use several classifiers
-4. Use Grid Search for tree models params
-5. Assembly models
+1. Try Daniel's features
+2. Try separate models
