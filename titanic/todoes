@@ -1,4 +1,11 @@
-1. Try Daniel's features
-    - Choose best models for ansamble
+1. Try different features
+    - different implementations for the same feature
+    - run grid search for them
+        - does it make sense?
+        - what model to use to see the result?
+    - build ML model for Age nulls?
 2. Try separate models
-3. Read the notebook - https://www.kaggle.com/code/yassineghouzam/titanic-top-4-with-ensemble-modeling
+3. Choose best models for ensemble
+    - write hyperparameters tuning for them
+4. Try different ensembles
+5. 14 == 22?
