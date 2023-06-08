@@ -1,9 +1,9 @@
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 
-from titanic.data import SEED, get_titanic_data
-from titanic.features import get_feature_transformer, prepare_features_2
-from titanic.submission import generate_and_save_submission
+from titanic.solo.data import SEED, get_titanic_data
+from titanic.solo.features import get_feature_transformer, prepare_features_2
+from titanic.solo.submission import generate_and_save_submission
 
 train_df, test_df = get_titanic_data()
 

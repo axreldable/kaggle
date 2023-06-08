@@ -9,8 +9,8 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.svm import SVC
 from sklearn.tree import DecisionTreeClassifier
 
-from titanic.data import get_titanic_data, SEED
-from titanic.features import prepare_features_xgb
+from titanic.solo.data import get_titanic_data, SEED
+from titanic.solo.features import prepare_features_xgb
 
 # https://machinelearningmastery.com/stacking-ensemble-machine-learning-with-python/
 

@@ -7,7 +7,7 @@ from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import OneHotEncoder
 from sklearn.preprocessing import StandardScaler
 
-from titanic.data import SEED
+from titanic.solo.data import SEED
 
 categorical_features = ['Pclass', 'Sex', 'SibSp', 'Parch', 'Embarked']  # Embarked - nulls (2)
 numerical_features = ['Age', 'Fare']  # Embarked - nulls

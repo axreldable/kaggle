@@ -8,7 +8,7 @@ from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import OneHotEncoder
 from sklearn.preprocessing import StandardScaler
 
-from titanic.data import SEED
+from titanic.solo.data import SEED
 
 
 def concat_df(train_data, test_data):

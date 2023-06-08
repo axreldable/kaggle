@@ -1,8 +1,8 @@
 import xgboost as xgb
 from sklearn.metrics import accuracy_score
 
-from titanic.data import get_titanic_data, SEED
-from titanic.features import prepare_features_xgb
+from titanic.solo.data import get_titanic_data, SEED
+from titanic.solo.features import prepare_features_xgb
 
 train_df, test_df = get_titanic_data()
 X_train, X_test, y_train, y_test = prepare_features_xgb(train_df, 'Survived')
